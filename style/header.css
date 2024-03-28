@@ -1,0 +1,46 @@
+.header { display: flex; justify-content: space-between; align-items: flex-start; margin-top: 25px; height: 53px; border-bottom: 1px solid #46A35880; }
+.header__logo { display: flex; }
+.header__logo-img { background: url(../img/logo.svg) no-repeat 50%; width: 35px; height: 35px; }
+.header__logo-text { background: url(../img/logotext.svg) no-repeat 50%; width: 110px; height: 35px; margin-left: 6px; }
+.header__navs { display: flex; }
+.header__nav { opacity: .6; text-decoration: none; color: #3D3D3D; font: 400 16px/20px "Cera Pro"; padding-top: 7px; padding-bottom: 25px; cursor: pointer; }
+.header__nav:hover { opacity: 1; }
+.header__nav--active { opacity: 1; font-weight: 600; position: relative; }
+.header__nav--active:after { content: ""; width: 100%; height: 3px; position: absolute; left: 0; bottom: -1px; background: #46A358; }
+.header__nav + .header__nav { margin-left: 50px; }
+.header__buttons { display: flex; }
+.header__icons { margin-top: 7px; display: flex; }
+.header__icon--search { opacity: .6; cursor: pointer; background: url(../img/search.svg) no-repeat 50%; width: 20px; height: 20px; }
+.header__icon--search:hover { opacity: 1; }
+.header__icon--cart { opacity: .6; cursor: pointer; background: url(../img/basket.svg) no-repeat 50%; width: 24px; height: 24px; position: relative; }
+.header__icon--cart:hover { opacity: 1; }
+.header__count { border-radius: 50%; background: #46A358; color: #FFFFFF; font: 500 10px/12px "Cera Pro"; text-align: center; padding: 0 3px; display: inline-block; vertical-align: middle; position: absolute; top: -3px; right: -8px; border: 3px solid #FFFFFF; }
+.header__auth { margin-left: 50px; }
+.header__login { transition: background-color 150ms; border-radius: 6px; color: #FFFFFF; font: 500 16px/35px "Cera Pro"; padding: 0 17px 0 41px; background: #46A358 url(../img/logout.svg) no-repeat 16px 8px; cursor: pointer; }
+.header__login:hover { background-color: #376e37; }
+.header__icon + .header__icon { margin-left: 50px; }
+.header__icon + .header__login { margin-left: 50px; }
+
+/* HEADER MOBILE */
+.header-mobile { background: #FBFBFB; z-index: 100; position: sticky; top:0; justify-content: space-between; border-bottom: 1px solid #46A358; gap: 50px; display: none; height: 70px; align-items: center; }
+.header-mobile__hamburger { cursor: pointer; background: url(../img/hamburger.svg) no-repeat 50% / 20px; width: 35px; height: 35px; }
+.header-mobile__logo-img { background: url(../img/logo.svg) no-repeat 50%; width: 35px; height: 35px; }
+.header-mobile__logo-text { background: url(../img/logotext.svg) no-repeat 50%; width: 110px; height: 35px; margin-left: 6px; }
+.header-mobile__hamburger-wrap { display: flex; }
+.header-mobile__icon-wrap { display: flex; gap: 30px; padding: 0 20px 0 0; }
+.header-mobile__icon { display: block; width: 35px; height: 35px; cursor: pointer; background: no-repeat 50% / 18px; position: relative; }
+.header-mobile__icon--search { cursor: pointer; background-image: url(../img/search.svg); }
+.header-mobile__icon--cart { cursor: pointer; background-image: url(../img/basket.svg); }
+.header-mobile__count { border-radius: 50%; background: #46A358; color: #FFFFFF; font: 500 15px/17px "Cera Pro"; text-align: center; padding: 0 4px; display: inline-block; vertical-align: middle; position: absolute; top: -3px; right: -8px; border: 3px solid #FFFFFF; }
+
+@media screen and (max-width: 1023px) {
+    .header { display: none; }
+    .header-mobile { display: flex; padding: 0 27px; }
+    .header-mobile__hamburger-wrap { gap: 10px; }
+    .header-mobile__logo { display: flex; }
+}
+
+@media screen and (max-width: 425px) {
+    .header-mobile { gap: 18px; padding: 6px; }
+    .header-mobile__icon-wrap { gap: 18px; }
+}
